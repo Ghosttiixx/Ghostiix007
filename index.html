@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostiix007 — Fullstack & Automation Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="brand">Ghostiix007<span>.dev</span></a>
+            
+            <nav class="nav">
+                <a href="#about" data-i18n="nav_about">Про мене</a>
+                <a href="#skills" data-i18n="nav_skills">Стек</a>
+                <a href="#services" data-i18n="nav_services">Послуги</a>
+                <a href="#contact" data-i18n="nav_contact">Контакти</a>
+            </nav>
+
+            <div class="controls-group">
+                <!-- Переключатель языка -->
+                <div class="lang-picker">
+                    <button class="lang-btn active" data-lang="ua">UA</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+
+                <!-- Переключатель темы -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Секция -->
+        <section class="hero" id="about">
+            <div class="container">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span data-i18n="hero_status">Готовий до нових проєктів & фрилансу</span>
+                </div>
+                <h1 data-i18n="hero_title">Створюю швидкі веб-сайти, API та інструменти автоматизації</h1>
+                <p class="hero-sub" data-i18n="hero_sub">
+                    Розробка чистих веб-інтерфейсів, розробка парсерів даних на Python, Telegram-ботів та бекенд-сервісів на C# / ASP.NET.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" data-i18n="btn_primary">Написати мені</a>
+                    <a href="https://t.me/dontwrks" target="_blank" class="btn btn-secondary">Telegram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Стек -->
+        <section class="section section-card" id="skills">
+            <div class="container">
+                <div class="section-title">
+                    <span class="tag" data-i18n="tag_stack">Технології</span>
+                    <h2 data-i18n="stack_h2">Мій інструментарій</h2>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Frontend</h3>
+                        <p data-i18n="stack_frontend">Адаптивна верстка, швидкі веб-інтерфейси, оптимізація швидкості завантаження.</p>
+                        <div class="chips">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🛠️</div>
+                        <h3>Backend & API</h3>
+                        <p data-i18n="stack_backend">Проєктування REST API, обробка даних, побудова надійної архітектури.</p>
+                        <div class="chips">
+                            <span>C#</span>
+                            <span>ASP.NET Core</span>
+                            <span>REST API</span>
+                            <span>JSON</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🤖</div>
+                        <h3>Automation</h3>
+                        <p data-i18n="stack_auto">Скрипти збору даних з сайтів, парсери, боти та системні утиліти.</p>
+                        <div class="chips">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>Scraping</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Послуги -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-title">
+                    <span class="tag" data-i18n="tag_services">Послуги</span>
+                    <h2 data-i18n="services_h2">Чим можу допомогти вашому бізнесу</h2>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="service-box">
+                        <div class="service-num">01</div>
+                        <div>
+                            <h3 data-i18n="srv_1_h3">Веб-верстка та UI-розробка</h3>
+                            <p data-i18n="srv_1_p">Перенесення макетів з Figma у чистий, адаптивний HTML/CSS/JS або React-код. Сайт буде чудово виглядати на смартфонах та планшетах.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-num">02</div>
+                        <div>
+                            <h3 data-i18n="srv_2_h3">Парсинг даних та Автоматизація</h3>
+                            <p data-i18n="srv_2_p">Автоматичний збір інформації з будь-яких сайтів чи маркетплейсів. Вигрузка результатів у Excel, JSON, CSV або базу даних.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-num">03</div>
+                        <div>
+                            <h3 data-i18n="srv_3_h3">Telegram-боти та Інтеграція API</h3>
+                            <p data-i18n="srv_3_p">Розробка ботів для прийому заявок, сповіщень чи автоматизації роботи з клієнтами. Связка сайтів зі сторонніми сервісами.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-num">04</div>
+                        <div>
+                            <h3 data-i18n="srv_4_h3">Доопрацювання та Виправлення багів</h3>
+                            <p data-i18n="srv_4_p">Усунення помилок у верстці, виправлення скриптів на JavaScript/Python, оптимізація швидкості роботи існуючого сайту.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section class="section section-dark" id="contact">
+            <div class="container text-center">
+                <h2 data-i18n="contact_h2">Потрібно виконати задачу?</h2>
+                <p class="contact-sub" data-i18n="contact_sub">Напишіть мені в Telegram або Instagram — обговоримо деталі, терміни та вартість.</p>
+                
+                <div class="cta-btns">
+                    <a href="https://t.me/dontwrks" target="_blank" class="btn btn-accent" data-i18n="btn_tg">Написати в Telegram</a>
+                    <a href="https://instagram.com/ghosttiix" target="_blank" class="btn btn-outline-white">Instagram</a>
+                    <a href="https://github.com/Ghostiix007" target="_blank" class="btn btn-outline-white">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>© 2026 Ghostiix007.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
