@@ -123,6 +123,25 @@ function initTheme() {
     });
 }
 
+// Мобильное меню
+function initMobileMenu() {
+    const burgerBtn = document.getElementById('burgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (!burgerBtn || !navMenu) return;
+
+    burgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Закрывать меню при клике на любую ссылку
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
 // Инициализация событий
 document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -134,4 +153,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred_lang') || 'ua';
     setLanguage(savedLang);
     initTheme();
+    initMobileMenu();
 });

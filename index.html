@@ -16,7 +16,8 @@
         <div class="container header-container">
             <a href="#" class="brand">Ghostiix007<span>.dev</span></a>
             
-            <nav class="nav">
+            <!-- Мобильное выпадающее меню -->
+            <nav class="nav" id="navMenu">
                 <a href="#about" data-i18n="nav_about">Про мене</a>
                 <a href="#skills" data-i18n="nav_skills">Стек</a>
                 <a href="#services" data-i18n="nav_services">Послуги</a>
@@ -34,6 +35,13 @@
                 <!-- Переключатель темы -->
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="theme-icon">🌙</span>
+                </button>
+
+                <!-- Гамбургер кнопка для мобилок -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
         </div>
@@ -168,7 +176,7 @@
 
     <footer class="footer">
         <div class="container text-center">
-            <p>© 2026 Ghostiix007.</p>
+            <p>© 2026 Ghostiix007</p>
         </div>
     </footer>
 
