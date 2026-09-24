@@ -3,181 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghosttiixx — Fullstack & Automation Engineer</title>
+    <title>Ghosttiix — Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Шапка -->
-    <header class="header">
-        <div class="container header-container">
-            <a href="#" class="brand">Ghosttiixx <span>PewPew</span></a>
-            
-            <!-- Мобильное выпадающее меню -->
-            <nav class="nav" id="navMenu">
-                <a href="#about" data-i18n="nav_about">Про мене</a>
-                <a href="#skills" data-i18n="nav_skills">Стек</a>
-                <a href="#services" data-i18n="nav_services">Послуги</a>
-                <a href="#contact" data-i18n="nav_contact">Контакти</a>
-            </nav>
-
-            <div class="controls-group">
-                <!-- Переключатель языка -->
-                <div class="lang-picker">
-                    <button class="lang-btn active" data-lang="ua">UA</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="ru">RU</button>
-                </div>
-
-                <!-- Переключатель темы -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <span class="theme-icon">🌙</span>
-                </button>
-
-                <!-- Гамбургер кнопка для мобилок -->
-                <button class="burger-btn" id="burgerBtn" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <!-- Шапка и навигация -->
+    <header class="navbar">
+        <div class="logo">Ghosttiix</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">Про мене</a></li>
+                <li><a href="#stack" data-i18n="nav_stack">Стек</a></li>
+                <li><a href="#solutions" data-i18n="nav_solutions">Рішення</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="ua">UA</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
         </div>
     </header>
 
-    <main class="main-content">
-        <!-- Hero Секция -->
-        <section class="hero" id="about">
-            <div class="container">
-                <div class="status-pill">
-                    <span class="status-dot"></span>
-                    <span data-i18n="hero_status">Готовий до нових проєктів & фрилансу</span>
-                </div>
-                <h1 data-i18n="hero_title">Створюю швидкі веб-сайти, API та інструменти автоматизації</h1>
-                <p class="hero-sub" data-i18n="hero_sub">
-                    Розробка чистих веб-інтерфейсів, розробка парсерів даних на Python, Telegram-ботів та бекенд-сервісів на C# / ASP.NET.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary" data-i18n="btn_primary">Написати мені</a>
-                    <a href="https://t.me/dontwrks" target="_blank" class="btn btn-secondary">Telegram</a>
-                </div>
+    <!-- Главный баннер -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="badge" data-i18n="hero_badge">Available for new projects & freelance</div>
+            <h1 data-i18n="hero_title">Building Fast Websites, APIs & Automation Tools</h1>
+            <p class="hero-desc" data-i18n="hero_desc">Developing clean web interfaces, Python scrapers, Telegram bots, and backend services with C# / ASP.NET.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary" data-i18n="btn_discuss">Get in Touch</a>
+                <a href="https://t.me/your_telegram" target="_blank" class="btn btn-secondary">Telegram</a>
             </div>
-        </section>
-
-        <!-- Стек -->
-        <section class="section section-card" id="skills">
-            <div class="container">
-                <div class="section-title">
-                    <span class="tag" data-i18n="tag_stack">Технології</span>
-                    <h2 data-i18n="stack_h2">Мій інструментарій</h2>
-                </div>
-
-                <div class="grid grid-3">
-                    <div class="card">
-                        <div class="card-icon">⚡</div>
-                        <h3>Frontend</h3>
-                        <p data-i18n="stack_frontend">Адаптивна верстка, швидкі веб-інтерфейси, оптимізація швидкості завантаження.</p>
-                        <div class="chips">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>TypeScript</span>
-                            <span>React</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-icon">🛠️</div>
-                        <h3>Backend & API</h3>
-                        <p data-i18n="stack_backend">Проєктування REST API, обробка даних, побудова надійної архітектури.</p>
-                        <div class="chips">
-                            <span>C#</span>
-                            <span>ASP.NET Core</span>
-                            <span>REST API</span>
-                            <span>JSON</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-icon">🤖</div>
-                        <h3>Automation</h3>
-                        <p data-i18n="stack_auto">Скрипти збору даних з сайтів, парсери, боти та системні утиліти.</p>
-                        <div class="chips">
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>Scraping</span>
-                            <span>Git</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Послуги -->
-        <section class="section" id="services">
-            <div class="container">
-                <div class="section-title">
-                    <span class="tag" data-i18n="tag_services">Послуги</span>
-                    <h2 data-i18n="services_h2">Чим можу допомогти вашому бізнесу</h2>
-                </div>
-
-                <div class="grid grid-2">
-                    <div class="service-box">
-                        <div class="service-num">01</div>
-                        <div>
-                            <h3 data-i18n="srv_1_h3">Веб-верстка та UI-розробка</h3>
-                            <p data-i18n="srv_1_p">Перенесення макетів з Figma у чистий, адаптивний HTML/CSS/JS або React-код. Сайт буде чудово виглядати на смартфонах та планшетах.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-num">02</div>
-                        <div>
-                            <h3 data-i18n="srv_2_h3">Парсинг даних та Автоматизація</h3>
-                            <p data-i18n="srv_2_p">Автоматичний збір інформації з будь-яких сайтів чи маркетплейсів. Вигрузка результатів у Excel, JSON, CSV або базу даних.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-num">03</div>
-                        <div>
-                            <h3 data-i18n="srv_3_h3">Telegram-боти та Інтеграція API</h3>
-                            <p data-i18n="srv_3_p">Розробка ботів для прийому заявок, сповіщень чи автоматизації роботи з клієнтами. Связка сайтів зі сторонніми сервісами.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-box">
-                        <div class="service-num">04</div>
-                        <div>
-                            <h3 data-i18n="srv_4_h3">Доопрацювання та Виправлення багів</h3>
-                            <p data-i18n="srv_4_p">Усунення помилок у верстці, виправлення скриптів на JavaScript/Python, оптимізація швидкості роботи існуючого сайту.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Контакты -->
-        <section class="section section-dark" id="contact">
-            <div class="container text-center">
-                <h2 data-i18n="contact_h2">Потрібно виконати задачу?</h2>
-                <p class="contact-sub" data-i18n="contact_sub">Напишіть мені в Telegram або Instagram — обговоримо деталі, терміни та вартість.</p>
-                
-                <div class="cta-btns">
-                    <a href="https://t.me/dontwrks" target="_blank" class="btn btn-accent" data-i18n="btn_tg">Написати в Telegram</a>
-                    <a href="https://instagram.com/ghosttiix" target="_blank" class="btn btn-outline-white">Instagram</a>
-                    <a href="https://github.com/Ghosttiixx" target="_blank" class="btn btn-outline-white">GitHub</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container text-center">
-            <p>© 2026 Ghostiix007</p>
         </div>
+    </section>
+
+    <!-- Стек технологий -->
+    <section class="section" id="stack">
+        <h2 data-i18n="stack_title">My Tech Stack</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <p data-i18n="stack_frontend_desc">Responsive layout, fast web interfaces, loading speed optimization.</p>
+                <div class="tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">React</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Backend & API</h3>
+                <p data-i18n="stack_backend_desc">REST API design, data processing, reliable backend architecture.</p>
+                <div class="tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">ASP.NET Core</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">JSON</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Automation</h3>
+                <p data-i18n="stack_auto_desc">Web scraping scripts, data extraction, bots, and system utilities.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Scraping</span>
+                    <span class="tag">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги и решения -->
+    <section class="section" id="solutions">
+        <h2 data-i18n="solutions_title">How I Can Help Your Business</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>01. Web Development & UI</h3>
+                <p data-i18n="sol_1_desc">Converting Figma designs into clean, responsive HTML/CSS/JS or React code that looks great on mobile devices.</p>
+            </div>
+            <div class="project-card">
+                <h3>02. Data Scraping & Automation</h3>
+                <p data-i18n="sol_2_desc">Automated data extraction from any website or marketplace, exporting directly to Excel, JSON, CSV, or DB.</p>
+            </div>
+            <div class="project-card">
+                <h3>03. Telegram Bots & API Integration</h3>
+                <p data-i18n="sol_3_desc">Building bots for lead generation, notifications, and client interaction. Connecting third-party APIs.</p>
+            </div>
+            <div class="project-card">
+                <h3>04. Bug Fixing & Code Optimization</h3>
+                <p data-i18n="sol_4_desc">Fixing UI bugs, updating Python/JS scripts, and improving overall website performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section contact-section" id="contact">
+        <div class="project-card text-center">
+            <h2 data-i18n="contact_title">Have a Project in Mind?</h2>
+            <p data-i18n="contact_desc">Message me on Telegram or Instagram to discuss scope, timeline, and pricing.</p>
+            <div class="contact-links">
+                <a href="https://t.me/your_telegram" target="_blank" class="btn btn-primary" data-i18n="btn_tg">Message on Telegram</a>
+                <a href="https://instagram.com/ghosttiix" target="_blank" class="btn btn-secondary">Instagram</a>
+                <a href="https://github.com/yourusername" target="_blank" class="btn btn-secondary">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ghosttiix007.</p>
     </footer>
 
     <script src="script.js"></script>
