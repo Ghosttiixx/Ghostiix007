@@ -233,6 +233,49 @@ footer {
     border-top: 1px solid var(--card-border);
 }
 
+.lang-switch {
+    position: relative;
+    display: flex;
+    background: #1a1c23; 
+    border-radius: 8px;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+
+.lang-switch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(var(--active-index, 0) * 33.33%);
+    width: 33.33%;
+    height: 100%;
+    background: #ff8c00; 
+    border-radius: 8px;
+
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.lang-btn {
+    flex: 1;
+    background: transparent !important; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+
+.lang-btn:active {
+    background-color: #ff8c00; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+    background-color: rgba(255, 140, 0, 0.1);
+}
+
+
 @media (max-width: 768px) {
     .navbar {
         padding: 0.8rem 1rem;

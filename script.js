@@ -70,6 +70,7 @@ const i18n = {
 function setLanguage(lang) {
     if (!i18n[lang]) return;
 
+  
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (i18n[lang][key]) {
@@ -77,6 +78,7 @@ function setLanguage(lang) {
         }
     });
 
+   
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
@@ -84,11 +86,24 @@ function setLanguage(lang) {
     localStorage.setItem('preferred_lang', lang);
 }
 
-document.querySelectorAll('.lang-btn').forEach(btn => {
+document.querySelectorAll('.lang-btn').forEach((btn, index) => {
     btn.addEventListener('click', () => {
         const lang = btn.getAttribute('data-lang');
         setLanguage(lang);
+        
+        btn.parentElement.style.setProperty('--active-index', index);
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferred_lang') || 'ua';
+    setLanguage(savedLang);
+    
+    const activeBtn = document.querySelector(`.lang-btn[data-lang="${savedLang}"]`);
+    if (activeBtn) {
+        const index = Array.from(activeBtn.parentElement.children).indexOf(activeBtn);
+        activeBtn.parentElement.style.setProperty('--active-index', index);
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
